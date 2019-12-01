@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>Registration form</title>
+<style>
+body
+{
+ text-align:center;
+background: url("background1.jpg");
+height:100%;
+width:100%;
+background-repeat:no-repeat;
+background-size: cover;
+background-position:center;
+}
+.first
+{
+ border-style: solid;
+border-radius: 30px;
+border-color:black;
+margin-top:60px;
+margin-left:500px;
+margin-right:500px;
+}
+#username
+{
+border-style:solid;
+}
+#emailid
+{
+border-style:solid;
+}
+#password
+{
+border-style:solid;
+}
+#confirmpassword
+{
+border-style:solid;
+}
+#contactno
+{
+border-style:solid;
+}
+textarea
+{
+border-style:solid;
+border-color:black;
+}
+#dateofbirth
+{
+border-style:solid;
+}
+</style>
+<script>
+function validatepassword()
+{
+
+var password = document.getElementById("password").value;
+var confirmpassword = document.getElementById("confirmpassword").value;
+var regex = "/^[A-Za-z0-9]\w{8,16}$"
+if(!password.match(regex))
+{
+alert("Use 8 to 16 characters")
+}
+if(password!=confirmpassword)
+{
+alert("Please use correct password")
+}
+}
+</script>
+</head>
+<body>
+<div class="first">
+<h2>Registration Form</h2>
+<form action="" >
+<table>
+<tr>
+<td><lable>username</lable></td>
+<td><input type="text" id="username" required/></td>
+</tr>
+<tr>
+<td><lable>emailid</lable></td>
+<td><input type="email" id="emailid" required/></td>
+</tr>
+<tr>
+<td><lable>password</lable></td>
+<td><input type="password" id="password" required/></td>
+</tr>
+<tr>
+<td><lable>confirmpassword</lable></td>
+<td><input type="password"id="confirmpassword" required/></td>
+</tr>
+<tr>
+<td><lable>contactno</lable></td>
+<td><input type="text"id="contactno" /></td>
+</tr>
+<tr>
+<td><lable>dateofbirth</lable></td>
+<td><input type="date"id="dateofbirth" /></td>
+</tr>
+<tr>
+<td><lable>address</lable></td>
+<td><textarea id="address"></textarea></td>
+</tr>
+<tr>
+<td><lable>Gender</lable></td>
+<td><input type="radio" name="radio" value="male" />male
+<input type="radio" name="radio" value="female" />female</td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" value="sign up" id="signup" onclick="validatepassword()" /></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
